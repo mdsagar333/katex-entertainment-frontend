@@ -32,8 +32,8 @@ const quickStartInfo = [
 
 const QuickStart = () => {
   return (
-    <div>
-      <h1 className="text-center">Quick Start Guide</h1>
+    <div className="custom__max__width" style={{ marginTop: "100px" }}>
+      <h1 className="text-center mb-5">Quick Start Guide</h1>
       <div className="container-fluid">
         <div className="row">
           {quickStartInfo.map((item, index) => {
@@ -49,26 +49,29 @@ const QuickStart = () => {
         </div>
         <div className="custom__quick_banner">
           <div className="container-fluid">
-            <div className="row">
-              <div className="col-12 col-md-3">
+            <div className="row g-5">
+              <div className="col-12 col-md-3 mb-3 d-flex align-items-stretch">
                 <QuickStartBannerCard
                   title="Akacoin Community"
                   description="There's something for everybody. Follow along, chat on Discord, or read up on what we’re doing."
                   linkStr="Learn More"
+                  pos={0}
                 />
               </div>
-              <div className="col-12 col-md-4">
+              <div className="col-12 col-md-4 mb-3 d-flex align-items-stretch">
                 <QuickStartBannerCard
                   title="Become a Validator"
                   description="Help secure the network by running decentralized infrastructure. Learn about operating a validator node."
                   linkStr="Learn More"
+                  pos={1}
                 />
               </div>
-              <div className="col-12 col-md-5">
+              <div className="col-12 col-md-5 mb-3 d-flex align-items-stretch">
                 <QuickStartBannerCard
                   title="Dev. Resource"
                   description="See the get started guide, videos, tutorials, SDKs, reference implementations, and more."
                   linkStr="Start Building"
+                  pos={2}
                 />
               </div>
             </div>

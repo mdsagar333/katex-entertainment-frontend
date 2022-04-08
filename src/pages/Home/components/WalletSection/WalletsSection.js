@@ -33,24 +33,10 @@ const WalletsSection = () => {
       </h1>
 
       <div className="container-fluid">
-        <div className="row">
+        <div className="row g-5">
           {walletsInfo.map((item, index) => {
             return (
-              <Wallet
-                key={index}
-                {...item}
-                icon={index % 3}
-                bgclassStr={
-                  index % 2 === 0
-                    ? "custom__wallet__primary"
-                    : "custom__wallet__secondary"
-                }
-                rectangleBgClassStr={
-                  index % 2 === 0
-                    ? "custom__rectanlg__primary"
-                    : "custom__rectangle__secondary"
-                }
-              />
+              <Wallet key={index} {...item} iconPos={index % 3} pos={index} />
             );
           })}
         </div>

@@ -1,6 +1,12 @@
 /* global styles */
 h1, h2, h3, h4, h5, h6 {
   color: #0E133A;
+  font-weight: 700;
+}
+
+p {
+  color: #5B5D6D;
+  line-height: 1.5;
 }
 
 .custom__global__title {
@@ -49,8 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .custom__hero__section-title {
-  font-size: 72px;
-  line-height: 100px;
+  font-size: 50px;
   color: #0E133A;
   margin-bottom: 20px;
 }
@@ -105,20 +110,39 @@ h1, h2, h3, h4, h5, h6 {
 
 /* wallet */
 
+.custom__wallet__card {
+  border-radius: 15px;
+
+}
+
 .custom__wallet__primary {
   background-color: #1F33D8;
-  color: #fff !important;
+}
+
+.custom__wallet__primary h5, p {
+  color: #ffffff;
 }
 
 .custom__wallet__secondary {
   background-color: #FFD456;
-  color: #0E133A;
+}
+
+.custom__wallet__secondary h5, p {
+  color: #0E133A ;
 }
 
 .custom__wallet__card {
   border: none;
   max-width: 373px;
+  margin: auto;
   width: 100%;
+  overflow: hidden;
+  height: 462px;
+  
+}
+
+.custom__z__index {
+  z-index: 10;
 }
 
 .card-footer {
@@ -130,4 +154,73 @@ h1, h2, h3, h4, h5, h6 {
 .card-footer a {
   text-decoration: none;
   color: #fff !important;
+}
+
+.custom__rectangle1 {
+  position: absolute;
+  width: 234px;
+  height: 113px;
+  right: 0;
+  border-radius: 56px 0px 0px 56px;
+  top: -10px;
+}
+
+.custom__rectangle2 {
+  position: absolute;
+  width: 120px;
+  height: 75px;
+  border-radius: 36px 0px 0px 36px;
+  bottom: 150px;
+  right: 0px;
+}
+
+.custom__rectangle3 {
+  position: absolute;
+  width: 244px;
+  height: 62px;
+  border-radius: 0px 31px 31px 0px;
+  left: 0;
+  bottom: 40px;
+}
+
+.custom__rectanlg__primary {
+  background-color: #0C20CB;
+}
+
+.custom__rectangle__secondary {
+  background-color: #EEBC28;
+}
+
+.custom__bg__blue {
+  background-color: #0C20CB;
+}
+
+/* quick starts styles */
+
+.custom__quick_banner {
+  margin: 100px 0px 120px 0px;
+}
+
+.quickstart__banner__rectanlge-1 {
+  width: 140px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  border-radius: 25px 0px 0px 25px;
+}
+
+/* counter styles */
+
+.custom__counter__container {
+  padding: 40px;
+  border-bottom: 11px solid #FFD456;
+  margin-bottom: 60px;
+}
+
+.custom__counter__container p, h3 {
+  color: #fff;
+}
+
+.custom__footer__link {
+  color: #5B5D6D;
 }

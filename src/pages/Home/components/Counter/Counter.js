@@ -25,13 +25,13 @@ const networkStatistics = [
 
 const Counter = () => {
   return (
-    <div className="custom__counter__container">
-      <div className="container-fluid">
+    <div className="custom__counter__container custom__wallet__primary">
+      <div className="container-fluid custom__max__width">
         <div className="row">
           {networkStatistics.map((item, index) => {
             return (
-              <div className="col-12 col-md-3" key={index}>
-                <h6>{item.title}</h6>
+              <div className={`col-12 col-md-3`} key={index}>
+                <p>{item.title}</p>
                 <h3>{`${item.dollerSign ? "$" : ""}${item.value}`}</h3>
               </div>
             );
