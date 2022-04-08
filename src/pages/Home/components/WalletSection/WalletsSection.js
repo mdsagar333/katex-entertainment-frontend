@@ -27,20 +27,33 @@ const walletsInfo = [
 
 const WalletsSection = () => {
   return (
-    <div>
-      <h1>Choose Your Wallets</h1>
+    <div className="custom__max__width">
+      <h1 className="text-center custom__margin__bottom">
+        Choose Your Wallets
+      </h1>
 
-      <div className="row">
-        {walletsInfo.map((item, index) => {
-          return (
-            <Wallet
-              key={index}
-              {...item}
-              icon={index % 3}
-              classStr={index % 2}
-            />
-          );
-        })}
+      <div className="container-fluid">
+        <div className="row">
+          {walletsInfo.map((item, index) => {
+            return (
+              <Wallet
+                key={index}
+                {...item}
+                icon={index % 3}
+                bgclassStr={
+                  index % 2 === 0
+                    ? "custom__wallet__primary"
+                    : "custom__wallet__secondary"
+                }
+                rectangleBgClassStr={
+                  index % 2 === 0
+                    ? "custom__rectanlg__primary"
+                    : "custom__rectangle__secondary"
+                }
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );

@@ -4,20 +4,20 @@ import Navbar from "./components/Navbar/Navbar";
 import heroBg from "../../assets/image/Image.png";
 import AkaCoinSection from "./components/AkaCoinSection/AkaCoinSection";
 import WalletsSection from "./components/WalletSection/WalletsSection";
+import QuickStart from "./components/QuickStartSection/QuickStart";
+import Counter from "./components/Counter/Counter";
+import Footer from "./components/Footer/Footer";
+import HeaderSection from "./components/Header/HeaderSection";
 
 export const Home = () => {
   return (
-    <>
-      <Navbar />
-      <HeroSection
-        title="Living Ecosystem Decentralized Token"
-        description="Akacoin is a open source peer-to-peer digital currency,community-run
-technology that supports cryptocurrencies and thousands of
-decentralized applications."
-        image={heroBg}
-      />
+    <div className="custom__main__container">
+      <HeaderSection />
       <AkaCoinSection />
       <WalletsSection />
-    </>
+      <QuickStart />
+      <Counter />
+      <Footer />
+    </div>
   );
 };

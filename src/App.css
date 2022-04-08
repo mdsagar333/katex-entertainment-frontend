@@ -1,8 +1,133 @@
-.custom__main__container {
-  /* max-width: 1210px; */
+/* global styles */
+h1, h2, h3, h4, h5, h6 {
+  color: #0E133A;
+}
+
+.custom__global__title {
+  font-size: 48px;
+  margin-bottom: 64px;
+}
+
+.custom__max__width {
+  width: 100%;
+  max-width: 1210px;
   margin: auto;
+}
+
+.custom__bottom__margin {
+  margin-bottom: 20px;
+}
+
+/* end of global styles */
+
+/* .custom__main__container {  
+  width: 100%;
+  max-width: 1210px;
+  margin: auto;
+} */
+
+
+.custom__hero__section-height {
+  height: 738px;
+}
+
+.custom__header, .custom__nav__wrapper {
+  background-color: #F4F5FA !important;
+  margin-bottom: 76px;
+  
+}
+
+.custom__hero__section-img {
+  position: absolute;
+  right: 0;
+}
+
+.custom__hero__section-h6 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.custom__hero__section-title {
+  font-size: 72px;
+  line-height: 100px;
+  color: #0E133A;
+  margin-bottom: 20px;
+}
+
+.custom_primary {
+  color: #1F33D8;
+}
+.custom_secodary {
+  color: #FCD768;
+}
+
+.hero_btn_group {
+  margin-top: 88px;
+}
+
+.custom__hero__section-btn__1 {
+  background: #1F33D8;
+  padding: 16px 56px !important;
+  border-radius: 38px;
+  margin-right: 5px;
+  color: #fff
 }
 
 .github__img {
   width: 28px;
+}
+
+/* akacoin styles */
+.custom__akaCoin-h2 {
+  font-size:  40px;
+  Line-height: 52px;
+}
+
+.custom__margin__bottom {
+  margin-bottom: 80px;
+}
+
+.custom__akacoin__img {
+  display: inline-block;
+  
+}
+
+.custom__player__container {
+  max-width: 760px;
+  width: 100%;
+  height: 100%;
+}
+
+.custom__aka__margin__bottom {
+  margin-bottom: 150px;
+}
+
+/* wallet */
+
+.custom__wallet__primary {
+  background-color: #1F33D8;
+  color: #fff !important;
+}
+
+.custom__wallet__secondary {
+  background-color: #FFD456;
+  color: #0E133A;
+}
+
+.custom__wallet__card {
+  border: none;
+  max-width: 373px;
+  width: 100%;
+}
+
+.card-footer {
+  background: transparent;
+  border: none;
+  color: #fff !important;
+}
+
+.card-footer a {
+  text-decoration: none;
+  color: #fff !important;
 }

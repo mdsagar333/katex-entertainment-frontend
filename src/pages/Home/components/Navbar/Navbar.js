@@ -5,7 +5,7 @@ import navData from "../../../../data/navabarData";
 const Navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light custom__nav__wrapper custom__max__width">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             <img src={logo} alt="logo" />

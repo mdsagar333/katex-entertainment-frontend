@@ -5,3 +5,8 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
 }
+
+p {
+  color: #5B5D6D;
+  font-size: 16px;
+}
