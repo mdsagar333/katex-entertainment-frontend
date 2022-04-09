@@ -72,6 +72,7 @@ const QuickStart = () => {
                   description="See the get started guide, videos, tutorials, SDKs, reference implementations, and more."
                   linkStr="Start Building"
                   pos={2}
+                  image={true}
                 />
               </div>
             </div>

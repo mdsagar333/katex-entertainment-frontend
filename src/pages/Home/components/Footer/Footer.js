@@ -24,7 +24,20 @@ const Footer = () => {
             <p>
               Living Ecosystem <br /> Decentralized Token
             </p>
-            <div className="custom__social__link__container"></div>
+            <div className="custom__social__link__container">
+              <a href="https://github.com/">
+                <img src={github} className="d-inline-block" />
+              </a>
+              <a href="https://dribbble.com/">
+                <img src={dribble} className="d-inline-block" />
+              </a>
+              <a href="https://www.facebook.com/">
+                <img src={facebook} className="d-inline-block" />
+              </a>
+              <a href="https://www.instagram.com/">
+                <img src={instagram} className="d-inline-block" />
+              </a>
+            </div>
           </div>
           <div className="col-12 col-md-2">
             <FooterVerticalNav navHeader="Pages" navLists={footerNavPages} />

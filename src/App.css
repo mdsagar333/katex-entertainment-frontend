@@ -209,6 +209,33 @@ p {
   border-radius: 25px 0px 0px 25px;
 }
 
+.quickstart__banner__rectanlge-2 {
+  width: 141px;
+  height: 58px;
+  position: absolute;
+  border-radius: 0px 29px 29px 0px;
+  left: 0;
+  top: 35%;
+}
+
+.quickstart__banner__rectanlge-3 {
+  width: 56%;
+  height: 58px;
+  position: absolute;
+  left: 0;
+  bottom: 10%;
+  border-radius: 0px 29px 29px 0px;
+}
+
+.quickstart__banner__rectanlge-4 {
+  width: 30%;
+  height: 84px;
+  position: absolute;
+  right: 0;
+  bottom: -7%;
+  border-radius: 40px 0px 0px 40px;
+}
+
 /* counter styles */
 
 .custom__counter__container {
