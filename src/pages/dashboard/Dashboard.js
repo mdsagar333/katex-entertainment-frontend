@@ -73,6 +73,9 @@ const Dashboard = () => {
           <BiMenu />
         </button>
       </div>
+      <h2 className="text-center custom__dashboard__margin">
+        Wellcome to your dashboard
+      </h2>
       <Outlet />
     </div>
   );

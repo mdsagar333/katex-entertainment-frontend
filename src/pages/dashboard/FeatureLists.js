@@ -11,7 +11,7 @@ const FeatureLists = () => {
 
   // activate banner function
   const handleActiveFeature = async (id) => {
-    const url = `https://fathomless-sea-96755.herokuapp.com/api/features/activate/${id}`;
+    const url = `https://fathomless-sea-96755.herokuapp.com/api/features/active/${id}`;
     Swal.fire({
       title: "Do you want to save the changes?",
       showDenyButton: true,
@@ -34,7 +34,7 @@ const FeatureLists = () => {
   // delte a single feature function
   const handleDelete = async (id) => {
     const url = `https://fathomless-sea-96755.herokuapp.com/api/features/${id}`;
-    console.log(url);
+    url;
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -47,7 +47,7 @@ const FeatureLists = () => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
         const res = await axios.delete(url);
-        console.log(res);
+        res;
         if (res.status === 204) {
           Swal.fire("Deleted!", "Your data has been deleted.", "success");
           setIsUpdateNeeded(isUpdateNeeded + 1);
@@ -108,25 +108,35 @@ const FeatureLists = () => {
                       </video>{" "}
                     </td>
                     <td>
-                      <button
-                        className="btn btn-primary me-2"
-                        onClick={() => handleActiveFeature(item._id)}
-                      >
-                        Activate
-                      </button>
-                      <Link
-                        className="btn btn-primary me-2"
-                        to={`/dashboard/update/features/${item._id}`}
-                      >
-                        Update
-                      </Link>
-                      <button
-                        className="btn btn-danger"
-                        onClick={() => handleDelete(item._id)}
-                        disabled={index === 0 ? true : false}
-                      >
-                        Delete
-                      </button>
+                      <div className="d-flex flex-column">
+                        <button
+                          className={`btn btn-${
+                            !item.active ? "primary" : "success"
+                          } me-2 mb-1`}
+                          onClick={() => handleActiveFeature(item._id)}
+                          disabled={item.active}
+                        >
+                          {item.active ? "Activated" : "Make Active"}
+                        </button>
+                        <Link
+                          className="btn btn-warning me-2 mb-1 text-white"
+                          to={`/dashboard/update/features/${item._id}`}
+                        >
+                          Update
+                        </Link>
+                        <button
+                          className="btn btn-danger"
+                          onClick={() => handleDelete(item._id)}
+                          disabled={
+                            item._id === "62548115b4215538d6297849" ||
+                            item.active === true
+                              ? true
+                              : false
+                          }
+                        >
+                          Delete
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 );

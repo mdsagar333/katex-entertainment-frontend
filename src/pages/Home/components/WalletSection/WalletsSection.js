@@ -66,7 +66,7 @@ const WalletsSection = () => {
       const result = await axios(
         "https://fathomless-sea-96755.herokuapp.com/api/wallets"
       );
-      console.log(result.data.data);
+      result.data.data;
       setWalletLists(result.data.data);
       setIsLoading(false);
     };

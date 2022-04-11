@@ -12,7 +12,7 @@ const AddWallet = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const submitWalletInfo = () => {
-    console.log(walletInfo);
+    walletInfo;
     setIsLoading(true);
     const url = "https://fathomless-sea-96755.herokuapp.com/api/wallets";
 

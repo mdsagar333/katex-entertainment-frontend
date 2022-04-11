@@ -14,11 +14,11 @@ const AddHeroBanner = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const submitBannerInfo = () => {
-    console.log("creating banner");
+    ("creating banner");
     setIsLoading(true);
     const url = "https://fathomless-sea-96755.herokuapp.com/api/hero-banner";
     // const url = "http://localhost:5000/api/hero-banner";
-    console.log(url);
+    url;
     const formData = new FormData();
     formData.append("title", bannerInfo.title);
     formData.append("description", bannerInfo.description);
@@ -39,7 +39,7 @@ const AddHeroBanner = () => {
         }
       })
       .catch((err) => {
-        console.log(err);
+        err;
         Swal.fire({
           icon: "error",
           title: "Oops...",
@@ -53,7 +53,7 @@ const AddHeroBanner = () => {
   };
 
   const handleChange = (e) => {
-    console.log("changed");
+    ("changed");
     if (e.target.name === "image") {
       setBannerInfo({ ...bannerInfo, [e.target.name]: e.target.files[0] });
     } else {

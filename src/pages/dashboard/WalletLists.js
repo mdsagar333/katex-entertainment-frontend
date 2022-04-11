@@ -12,7 +12,7 @@ const WalletLists = () => {
   // delete a wallete function
   const handleDelete = async (id) => {
     const url = `https://fathomless-sea-96755.herokuapp.com/api/wallets/${id}`;
-    console.log(url);
+    url;
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -24,7 +24,7 @@ const WalletLists = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         const res = await axios.delete(url);
-        console.log(res);
+        res;
         if (res.status === 204) {
           Swal.fire("Deleted!", "Your data has been deleted.", "success");
           setIsUpdateNeeded(isUpdateNeeded + 1);
@@ -79,20 +79,24 @@ const WalletLists = () => {
                     <td>{item.title}</td>
                     <td>{item.description}</td>
                     <td>
-                      {/* <button className="btn btn-primary">Activate</button> */}
-                      <Link
-                        className="btn btn-primary me-2"
-                        to={`/dashboard/update/wallets/${item._id}`}
-                      >
-                        Update
-                      </Link>
-                      <button
-                        className="btn btn-danger"
-                        onClick={() => handleDelete(item._id)}
-                        disabled={index < 3 ? true : false}
-                      >
-                        Delete
-                      </button>
+                      <div className="d-flex flex-column">
+                        {/* <button className="btn btn-primary">Activate</button> */}
+                        <Link
+                          className="btn btn-warning me-2 mb-1 text-white"
+                          to={`/dashboard/update/wallets/${item._id}`}
+                          style={{ width: "120px" }}
+                        >
+                          Update
+                        </Link>
+                        <button
+                          className="btn btn-danger"
+                          onClick={() => handleDelete(item._id)}
+                          disabled={index < 3 ? true : false}
+                          style={{ width: "120px" }}
+                        >
+                          Delete
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 );

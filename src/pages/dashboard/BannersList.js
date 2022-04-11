@@ -12,7 +12,7 @@ const BannersList = () => {
   // activate banner function
   const handleActiveBanner = async (id) => {
     const url = `https://fathomless-sea-96755.herokuapp.com/api/hero-banner/activate/${id}`;
-    console.log(url);
+    url;
     Swal.fire({
       title: "Do you want to save the changes?",
       showDenyButton: true,
@@ -35,7 +35,7 @@ const BannersList = () => {
   // delete single banner function
   const handleDelete = async (id) => {
     const url = `https://fathomless-sea-96755.herokuapp.com/api/hero-banner/${id}`;
-    console.log(url);
+    url;
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -110,25 +110,35 @@ const BannersList = () => {
                       />
                     </td>
                     <td>
-                      <button
-                        className="btn btn-primary me-2 mb-2"
-                        onClick={() => handleActiveBanner(item._id)}
-                      >
-                        Activate
-                      </button>
-                      <Link
-                        className="btn btn-primary me-2 mb-2"
-                        to={`/dashboard/update/hero-banner/${item._id}`}
-                      >
-                        Update
-                      </Link>
-                      <button
-                        className="btn btn-outline-danger mb-2"
-                        onClick={() => handleDelete(item._id)}
-                        disabled={index === 0 ? true : false}
-                      >
-                        Delete
-                      </button>
+                      <div className="d-flex flex-column">
+                        <button
+                          className={`btn btn-${
+                            !item.active ? "primary" : "success"
+                          } me-2 mb-2`}
+                          onClick={() => handleActiveBanner(item._id)}
+                          disabled={item.active}
+                        >
+                          {item.active ? "Activated" : "Make Active"}
+                        </button>
+                        <Link
+                          className="btn btn-warning me-2 mb-2 text-white"
+                          to={`/dashboard/update/hero-banner/${item._id}`}
+                        >
+                          Update
+                        </Link>
+                        <button
+                          className="btn btn-outline-danger mb-2"
+                          onClick={() => handleDelete(item._id)}
+                          disabled={
+                            item._id === "62548024b4215538d6297848" ||
+                            item.active === true
+                              ? true
+                              : false
+                          }
+                        >
+                          Delete
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 );

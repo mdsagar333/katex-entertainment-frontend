@@ -15,7 +15,7 @@ const AkaCoinSection = () => {
       const result = await axios(
         "https://fathomless-sea-96755.herokuapp.com/api/features/active"
       );
-      console.log(result.data.data);
+      result.data.data;
       setfeatureInfo(result.data.data);
       setIsLoading(false);
     };

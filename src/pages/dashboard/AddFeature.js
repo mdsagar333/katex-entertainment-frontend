@@ -13,7 +13,7 @@ const AddFeature = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const submitFeatureInfo = () => {
-    console.log(featureInfo);
+    featureInfo;
     setIsLoading(true);
     // const url = "https://fathomless-sea-96755.herokuapp.com/api/features";
     const url = "http://localhost:5000/api/features";

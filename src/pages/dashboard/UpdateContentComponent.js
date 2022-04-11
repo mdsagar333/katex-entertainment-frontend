@@ -31,7 +31,7 @@ const UpdateContentComponent = () => {
   };
 
   const handleUpdate = async () => {
-    console.log(infoData);
+    infoData;
     setIsLoading(true);
     const updateAPI = `https://fathomless-sea-96755.herokuapp.com/api/${collection}/${id}`;
 
@@ -41,7 +41,7 @@ const UpdateContentComponent = () => {
     formData.append("title", infoData.title);
     formData.append("description", infoData.description);
 
-    console.log(typeof infoData.image === "object");
+    typeof infoData.image === "object";
     if (infoData.image && typeof infoData.image === "object") {
       formData.append("image", infoData.image);
       formData.append("prevImage", infoData.prevImage);
@@ -51,7 +51,7 @@ const UpdateContentComponent = () => {
       formData.append("prevVideo", infoData.prevvideo);
     }
 
-    console.log(formData.get("prevVideo"));
+    formData.get("prevVideo");
 
     Swal.fire({
       title: "Are you sure?",
@@ -72,7 +72,7 @@ const UpdateContentComponent = () => {
           }
           setIsLoading(false);
         } catch (err) {
-          console.log(err);
+          err;
         }
       }
     });
