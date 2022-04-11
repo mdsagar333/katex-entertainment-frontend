@@ -12,7 +12,7 @@ const WalletLists = () => {
   // delete a wallete function
   const handleDelete = async (id) => {
     const url = `https://fathomless-sea-96755.herokuapp.com/api/wallets/${id}`;
-    url;
+
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -24,7 +24,7 @@ const WalletLists = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         const res = await axios.delete(url);
-        res;
+
         if (res.status === 204) {
           Swal.fire("Deleted!", "Your data has been deleted.", "success");
           setIsUpdateNeeded(isUpdateNeeded + 1);

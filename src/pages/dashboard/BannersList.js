@@ -12,7 +12,7 @@ const BannersList = () => {
   // activate banner function
   const handleActiveBanner = async (id) => {
     const url = `https://fathomless-sea-96755.herokuapp.com/api/hero-banner/activate/${id}`;
-    url;
+
     Swal.fire({
       title: "Do you want to save the changes?",
       showDenyButton: true,
@@ -35,7 +35,7 @@ const BannersList = () => {
   // delete single banner function
   const handleDelete = async (id) => {
     const url = `https://fathomless-sea-96755.herokuapp.com/api/hero-banner/${id}`;
-    url;
+
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",

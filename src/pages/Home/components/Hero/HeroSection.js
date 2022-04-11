@@ -13,7 +13,7 @@ const HeroSection = ({ title, description, image }) => {
       const result = await axios(
         "https://fathomless-sea-96755.herokuapp.com/api/hero-banner/active"
       );
-      result;
+
       setBannerInfo(result.data.banner);
       setIsLoading(false);
     };

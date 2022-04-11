@@ -34,7 +34,7 @@ const FeatureLists = () => {
   // delte a single feature function
   const handleDelete = async (id) => {
     const url = `https://fathomless-sea-96755.herokuapp.com/api/features/${id}`;
-    url;
+
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -47,7 +47,7 @@ const FeatureLists = () => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
         const res = await axios.delete(url);
-        res;
+
         if (res.status === 204) {
           Swal.fire("Deleted!", "Your data has been deleted.", "success");
           setIsUpdateNeeded(isUpdateNeeded + 1);

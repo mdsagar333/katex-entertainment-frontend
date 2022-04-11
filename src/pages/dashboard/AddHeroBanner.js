@@ -18,7 +18,7 @@ const AddHeroBanner = () => {
     setIsLoading(true);
     const url = "https://fathomless-sea-96755.herokuapp.com/api/hero-banner";
     // const url = "http://localhost:5000/api/hero-banner";
-    url;
+
     const formData = new FormData();
     formData.append("title", bannerInfo.title);
     formData.append("description", bannerInfo.description);
@@ -39,7 +39,6 @@ const AddHeroBanner = () => {
         }
       })
       .catch((err) => {
-        err;
         Swal.fire({
           icon: "error",
           title: "Oops...",
