@@ -31,7 +31,6 @@ const UpdateContentComponent = () => {
   };
 
   const handleUpdate = async () => {
-    infoData;
     setIsLoading(true);
     const updateAPI = `https://fathomless-sea-96755.herokuapp.com/api/${collection}/${id}`;
 
@@ -41,7 +40,6 @@ const UpdateContentComponent = () => {
     formData.append("title", infoData.title);
     formData.append("description", infoData.description);
 
-    typeof infoData.image === "object";
     if (infoData.image && typeof infoData.image === "object") {
       formData.append("image", infoData.image);
       formData.append("prevImage", infoData.prevImage);
@@ -72,7 +70,7 @@ const UpdateContentComponent = () => {
           }
           setIsLoading(false);
         } catch (err) {
-          err;
+          console.log(err);
         }
       }
     });

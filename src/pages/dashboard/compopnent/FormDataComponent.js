@@ -7,7 +7,6 @@ const FormComponent = ({
   isRequired,
   data,
 }) => {
-  fileType;
   return (
     <form className="container-fluid">
       <div>
