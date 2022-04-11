@@ -101,7 +101,7 @@ const FeatureLists = () => {
                   <tr key={item._id}>
                     <th scope="row">{index + 1}</th>
                     <td>{item.title}</td>
-                    <td>{item.description}</td>
+                    <td>{`${item.description}`.substring(0, 50)}...</td>
                     <td>
                       <video width="80px" height="50px" controls>
                         <source src={item.video}></source>
@@ -123,6 +123,7 @@ const FeatureLists = () => {
                       <button
                         className="btn btn-danger"
                         onClick={() => handleDelete(item._id)}
+                        disabled={index === 0 ? true : false}
                       >
                         Delete
                       </button>

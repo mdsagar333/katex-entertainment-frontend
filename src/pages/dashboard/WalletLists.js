@@ -89,6 +89,7 @@ const WalletLists = () => {
                       <button
                         className="btn btn-danger"
                         onClick={() => handleDelete(item._id)}
+                        disabled={index < 3 ? true : false}
                       >
                         Delete
                       </button>

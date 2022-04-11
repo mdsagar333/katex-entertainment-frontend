@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Wallet from "./Wallet";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import axios from "axios";
 
 const responsive = {
   superLargeDesktop: {
@@ -47,7 +48,7 @@ const walletsInfo = [
   },
   {
     icon: "",
-    title: "sagar",
+    title: "AkaSagar",
     description:
       "AkaMask is a decentralized multi-chain digital wallet, dedicated to providing safe and convenient one-stop digital asset management services to users around the world.",
     link: "#",
@@ -55,6 +56,20 @@ const walletsInfo = [
 ];
 
 const WalletsSection = () => {
+  const [walletLists, setWalletLists] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(true);
+    const getBannerInfo = async () => {
+      const result = await axios("http://localhost:5000/api/wallets");
+      console.log(result.data);
+      setWalletLists(result.data.data);
+      setIsLoading(false);
+    };
+
+    getBannerInfo();
+  }, []);
   return (
     <div className="custom__max__width">
       <h1 className="text-center custom__margin__bottom">

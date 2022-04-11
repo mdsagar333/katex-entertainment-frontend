@@ -101,26 +101,31 @@ const BannersList = () => {
                   <tr key={item._id}>
                     <th scope="row">{index + 1}</th>
                     <td>{item.title}</td>
-                    <td>{item.description}</td>
-                    <td>
-                      <img src={item.image} style={{ width: "100px" }} alt="" />
+                    <td>{`${item.description}`.substring(0, 50)}...</td>
+                    <td className="d-flex align-items-center">
+                      <img
+                        src={item.image}
+                        style={{ width: "100px", height: "120px" }}
+                        alt=""
+                      />
                     </td>
                     <td>
                       <button
-                        className="btn btn-primary me-2"
+                        className="btn btn-primary me-2 mb-2"
                         onClick={() => handleActiveBanner(item._id)}
                       >
                         Activate
                       </button>
                       <Link
-                        className="btn btn-primary me-2"
+                        className="btn btn-primary me-2 mb-2"
                         to={`/dashboard/update/hero-banner/${item._id}`}
                       >
                         Update
                       </Link>
                       <button
-                        className="btn btn-primary"
+                        className="btn btn-outline-danger mb-2"
                         onClick={() => handleDelete(item._id)}
+                        disabled={index === 0 ? true : false}
                       >
                         Delete
                       </button>

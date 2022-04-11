@@ -49,7 +49,7 @@ const FormComponent = ({
             >
               Add {fileType}
               <br />
-              <small>Please select file less than 20MB</small>
+              <small>Please select file less than 50MB</small>
             </label>
             <input
               type="file"
