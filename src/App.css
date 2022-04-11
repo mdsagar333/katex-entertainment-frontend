@@ -45,6 +45,10 @@ p {
   
 }
 
+.custom__header {
+  min-height: 80vh;
+}
+
 .custom__hero__section-h6 {
   font-size: 22px;
   font-weight: 700;

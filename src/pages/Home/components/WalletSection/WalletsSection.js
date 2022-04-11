@@ -3,6 +3,7 @@ import Wallet from "./Wallet";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import axios from "axios";
+import Loading from "../../../SharedComponent/Loading";
 
 const responsive = {
   superLargeDesktop: {
@@ -62,8 +63,10 @@ const WalletsSection = () => {
   useEffect(() => {
     setIsLoading(true);
     const getBannerInfo = async () => {
-      const result = await axios("http://localhost:5000/api/wallets");
-      console.log(result.data);
+      const result = await axios(
+        "https://fathomless-sea-96755.herokuapp.com/api/wallets"
+      );
+      console.log(result.data.data);
       setWalletLists(result.data.data);
       setIsLoading(false);
     };
@@ -76,22 +79,31 @@ const WalletsSection = () => {
         Choose Your Wallets
       </h1>
 
-      <div className="container-fluid">
-        <div className="row g-md-5">
-          <Carousel
-            responsive={responsive}
-            infinite={true}
-            autoPlay={true}
-            partialVisible={true}
-          >
-            {walletsInfo.map((item, index) => {
-              return (
-                <Wallet key={index} {...item} iconPos={index % 3} pos={index} />
-              );
-            })}
-          </Carousel>
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <div className="container-fluid">
+          <div className="row g-md-5">
+            <Carousel
+              responsive={responsive}
+              infinite={true}
+              autoPlay={true}
+              partialVisible={true}
+            >
+              {walletLists.map((item, index) => {
+                return (
+                  <Wallet
+                    key={item._id}
+                    {...item}
+                    iconPos={index % 3}
+                    pos={index}
+                  />
+                );
+              })}
+            </Carousel>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

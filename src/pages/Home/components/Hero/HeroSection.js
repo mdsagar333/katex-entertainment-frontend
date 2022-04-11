@@ -11,8 +11,9 @@ const HeroSection = ({ title, description, image }) => {
     setIsLoading(true);
     const getBannerInfo = async () => {
       const result = await axios(
-        "http://localhost:5000/api/hero-banner/active"
+        "https://fathomless-sea-96755.herokuapp.com/api/hero-banner/active"
       );
+      console.log(result);
       setBannerInfo(result.data.banner);
       setIsLoading(false);
     };
@@ -32,8 +33,10 @@ const HeroSection = ({ title, description, image }) => {
                 <span className="heroSubtitle custom_primary">AKA</span>
                 <span className="heroSubtitle custom_secodary">COIN</span>
               </h6>
-              <h1 className="custom__hero__section-title">{title}</h1>
-              <p>{description}</p>
+              <h1 className="custom__hero__section-title">
+                {bannerInfo.title}
+              </h1>
+              <p>{bannerInfo.description}</p>
               <div className="hero_btn_group">
                 <button className="btn text-capitalize custom__hero__section-btn__1">
                   get started
@@ -45,7 +48,11 @@ const HeroSection = ({ title, description, image }) => {
               </div>
             </div>
             <div className="col-12 col-md-6">
-              <img src={image} alt="hero_bg" className="img-fluid " />
+              <img
+                src={bannerInfo.image}
+                alt="hero_bg"
+                className="img-fluid "
+              />
             </div>
           </div>
         )}

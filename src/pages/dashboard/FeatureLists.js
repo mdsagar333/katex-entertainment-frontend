@@ -11,7 +11,7 @@ const FeatureLists = () => {
 
   // activate banner function
   const handleActiveFeature = async (id) => {
-    const url = `http://localhost:5000/api/features/activate/${id}`;
+    const url = `https://fathomless-sea-96755.herokuapp.com/api/features/activate/${id}`;
     Swal.fire({
       title: "Do you want to save the changes?",
       showDenyButton: true,
@@ -33,7 +33,7 @@ const FeatureLists = () => {
 
   // delte a single feature function
   const handleDelete = async (id) => {
-    const url = `http://localhost:5000/api/features/${id}`;
+    const url = `https://fathomless-sea-96755.herokuapp.com/api/features/${id}`;
     console.log(url);
     Swal.fire({
       title: "Are you sure?",
@@ -66,7 +66,7 @@ const FeatureLists = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    const url = "http://localhost:5000/api/features";
+    const url = "https://fathomless-sea-96755.herokuapp.com/api/features";
     const getFeatures = async () => {
       const result = await axios(url);
       setFeatureLists(result.data.data);

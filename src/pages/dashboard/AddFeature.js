@@ -15,6 +15,7 @@ const AddFeature = () => {
   const submitFeatureInfo = () => {
     console.log(featureInfo);
     setIsLoading(true);
+    // const url = "https://fathomless-sea-96755.herokuapp.com/api/features";
     const url = "http://localhost:5000/api/features";
     const formData = new FormData();
     formData.append("title", featureInfo.title);

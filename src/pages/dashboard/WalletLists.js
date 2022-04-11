@@ -11,7 +11,7 @@ const WalletLists = () => {
 
   // delete a wallete function
   const handleDelete = async (id) => {
-    const url = `http://localhost:5000/api/wallets/${id}`;
+    const url = `https://fathomless-sea-96755.herokuapp.com/api/wallets/${id}`;
     console.log(url);
     Swal.fire({
       title: "Are you sure?",
@@ -43,7 +43,7 @@ const WalletLists = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    const url = "http://localhost:5000/api/wallets";
+    const url = "https://fathomless-sea-96755.herokuapp.com/api/wallets";
     const getWalletLists = async () => {
       const result = await axios(url);
       setWalletLists(result.data.data);

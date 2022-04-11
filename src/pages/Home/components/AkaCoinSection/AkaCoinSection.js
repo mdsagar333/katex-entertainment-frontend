@@ -12,7 +12,9 @@ const AkaCoinSection = () => {
   useEffect(() => {
     setIsLoading(true);
     const getBannerInfo = async () => {
-      const result = await axios("http://localhost:5000/api/features/active");
+      const result = await axios(
+        "https://fathomless-sea-96755.herokuapp.com/api/features/active"
+      );
       console.log(result.data.data);
       setfeatureInfo(result.data.data);
       setIsLoading(false);
@@ -32,14 +34,16 @@ const AkaCoinSection = () => {
             <div className="row custom__margin__bottom">
               <div className="col-12 col-md-5">
                 <h2 className="custom__akaCoin-h2 mb-5 mb-md-0">
-                  The fastest growing and community friendly
+                  {/* The fastest growing and community friendly */}
+                  {featureInfo.title}
                 </h2>
               </div>
               <div className="col-12 col-md-7">
                 <p className="custom__bottom__margin">
-                  Akacoin is the fastest blockchain in the world and the fastest
+                  {/* Akacoin is the fastest blockchain in the world and the fastest
                   growing ecosystem in crypto, with thousands of projects
-                  spanning DeFi, NFTs, Web3 and more.
+                  spanning DeFi, NFTs, Web3 and more. */}
+                  {featureInfo.description}
                 </p>
                 <a href="">
                   Explore Ecosystem{" "}
@@ -58,7 +62,7 @@ const AkaCoinSection = () => {
                 {/* <ReactPlayer
                   url={
                     featureInfo.video
-                      ? `http://localhost:5000/api/features/video/${featureInfo.video}`
+                      ? `https://fathomless-sea-96755.herokuapp.com/api/features/video/${featureInfo.video}`
                       : "https://www.youtube.com/watch?v=ysz5S6PUM-U"
                   }
                   // url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
@@ -67,7 +71,7 @@ const AkaCoinSection = () => {
                 /> */}
                 <video width="100%" height="400px" controls>
                   <source
-                    src={`http://localhost:5000/api/features/video/${featureInfo.video}`}
+                    src={`https://fathomless-sea-96755.herokuapp.com/api/features/video/${featureInfo.video}`}
                   ></source>
                 </video>
               </div>

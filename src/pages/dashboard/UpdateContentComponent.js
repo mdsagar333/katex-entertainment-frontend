@@ -10,7 +10,7 @@ const UpdateContentComponent = () => {
   const [infoData, setInfoData] = useState({});
   const { collection, id } = useParams();
 
-  const url = `http://localhost:5000/api/${collection}/${id}`;
+  const url = `https://fathomless-sea-96755.herokuapp.com/api/${collection}/${id}`;
   let fileNeeded;
   if (collection === "hero-banner" || collection === "features") {
     fileNeeded = true;
@@ -33,7 +33,7 @@ const UpdateContentComponent = () => {
   const handleUpdate = async () => {
     console.log(infoData);
     setIsLoading(true);
-    const updateAPI = `http://localhost:5000/api/${collection}/${id}`;
+    const updateAPI = `https://fathomless-sea-96755.herokuapp.com/api/${collection}/${id}`;
 
     delete infoData._id;
 

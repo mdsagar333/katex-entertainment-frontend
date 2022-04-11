@@ -14,7 +14,7 @@ const AddWallet = () => {
   const submitWalletInfo = () => {
     console.log(walletInfo);
     setIsLoading(true);
-    const url = "http://localhost:5000/api/wallets";
+    const url = "https://fathomless-sea-96755.herokuapp.com/api/wallets";
 
     axios
       .post(url, walletInfo)

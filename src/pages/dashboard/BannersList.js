@@ -11,7 +11,7 @@ const BannersList = () => {
 
   // activate banner function
   const handleActiveBanner = async (id) => {
-    const url = `http://localhost:5000/api/hero-banner/activate/${id}`;
+    const url = `https://fathomless-sea-96755.herokuapp.com/api/hero-banner/activate/${id}`;
     console.log(url);
     Swal.fire({
       title: "Do you want to save the changes?",
@@ -34,7 +34,7 @@ const BannersList = () => {
 
   // delete single banner function
   const handleDelete = async (id) => {
-    const url = `http://localhost:5000/api/hero-banner/${id}`;
+    const url = `https://fathomless-sea-96755.herokuapp.com/api/hero-banner/${id}`;
     console.log(url);
     Swal.fire({
       title: "Are you sure?",
@@ -66,7 +66,7 @@ const BannersList = () => {
 
   // getting all banner lists
   useEffect(() => {
-    const url = "http://localhost:5000/api/hero-banner";
+    const url = "https://fathomless-sea-96755.herokuapp.com/api/hero-banner";
     const getBanners = async () => {
       setIsLoading(true);
       const result = await axios(url);
