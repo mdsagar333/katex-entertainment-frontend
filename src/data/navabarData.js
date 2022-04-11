@@ -4,6 +4,10 @@ const navigationOption = [
   { text: "What is AKO?", link: "#" },
   { text: "Learn", link: "#" },
   { text: "Community", link: "#" },
+  {
+    text: "Dashboard",
+    link: "/dashboard",
+  },
 ];
 
 export const footerNavPages = [

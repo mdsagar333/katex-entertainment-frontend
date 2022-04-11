@@ -19,7 +19,7 @@ const Footer = () => {
     <footer className="custom__max__width">
       <div className="container-fluid mb-4">
         <div className="row">
-          <div className="col-12 col-md-4">
+          <div className="col-12 col-md-4 mb-5 mb-md-0">
             <img src={logo} className="d-inline-block mb-3" />
             <p>
               Living Ecosystem <br /> Decentralized Token
@@ -39,19 +39,19 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="col-12 col-md-2">
+          <div className="col-12 col-md-2 mb-5 mb-md-0">
             <FooterVerticalNav navHeader="Pages" navLists={footerNavPages} />
           </div>
-          <div className="col-12 col-md-2">
+          <div className="col-12 col-md-2 mb-5 mb-md-0">
             <FooterVerticalNav navHeader="Learn" navLists={footerNavLearn} />
           </div>
-          <div className="col-12 col-md-2">
+          <div className="col-12 col-md-2 mb-5 mb-md-0">
             <FooterVerticalNav
               navHeader="Support"
               navLists={footerNavSupport}
             />
           </div>
-          <div className="col-12 col-md-2">
+          <div className="col-12 col-md-2 mb-5 mb-md-0">
             <FooterVerticalNav
               navHeader="About AKA.Coin"
               navLists={footerNavAkaCoin}
@@ -59,7 +59,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="text-center"> &copy;2022 AKA.COIN. All right reserved</p>
+      <p className="text-center mb-4 mb-md-2">
+        {" "}
+        &copy;2022 AKA.COIN. All right reserved
+      </p>
     </footer>
   );
 };

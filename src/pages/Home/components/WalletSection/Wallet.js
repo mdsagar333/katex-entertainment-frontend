@@ -30,7 +30,7 @@ const Wallet = ({ title, description, link, iconPos, pos }) => {
   const rectangleWidth = pos % 2 ? 244 : 153;
 
   return (
-    <div className="col-12 col-md-4 d-flex align-items-stretch mb-3">
+    <div className="me-4 d-flex align-items-stretch mb-5 mb-md-3">
       <div
         className={`card ${bgclassStr} py-4 px-3 position-relative custom__wallet__card`}
       >

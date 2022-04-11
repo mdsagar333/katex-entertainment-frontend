@@ -50,7 +50,7 @@ const QuickStart = () => {
         <div className="custom__quick_banner">
           <div className="container-fluid">
             <div className="row g-5">
-              <div className="col-12 col-md-3 mb-3 d-flex align-items-stretch">
+              <div className="col-12 col-md-4 mb-3 d-flex align-items-stretch">
                 <QuickStartBannerCard
                   title="Akacoin Community"
                   description="There's something for everybody. Follow along, chat on Discord, or read up on what we’re doing."
@@ -66,7 +66,7 @@ const QuickStart = () => {
                   pos={1}
                 />
               </div>
-              <div className="col-12 col-md-5 mb-3 d-flex align-items-stretch">
+              <div className="col-12 col-md-4 mb-3 d-flex align-items-stretch">
                 <QuickStartBannerCard
                   title="Dev. Resource"
                   description="See the get started guide, videos, tutorials, SDKs, reference implementations, and more."

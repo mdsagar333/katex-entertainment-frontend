@@ -10,12 +10,12 @@ const QuickStartBannerCard = ({ title, description, linkStr, pos, image }) => {
       : "custom__rectangle__secondary";
   return (
     <div
-      class={`card ${bgclassStr} position-relative overflow-hidden`}
-      style={{ padding: "40px", height: "350px" }}
+      className={`card ${bgclassStr} position-relative overflow-hidden`}
+      style={{ padding: "40px", minHeight: "380px", borderRadius: "15px" }}
     >
-      <div class="card-body custom__z__index position-relative p-0">
-        <h3 class="card-title mb-3">{title}</h3>
-        <p class="card-text">{description}</p>
+      <div className="card-body custom__z__index position-relative p-0">
+        <h3 className="card-title mb-3">{title}</h3>
+        <p className="card-text">{description}</p>
       </div>
       {image && (
         <div className="my-4 overflow-hidden position-relative custom__z__index rounded-3">
@@ -23,7 +23,7 @@ const QuickStartBannerCard = ({ title, description, linkStr, pos, image }) => {
         </div>
       )}
       <div className="card-footer custom__z__index position-relative p-0">
-        <a href="#" class="btn">
+        <a href="#" className="btn">
           {linkStr}
         </a>
       </div>

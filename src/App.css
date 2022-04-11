@@ -33,19 +33,16 @@ p {
 } */
 
 
-.custom__hero__section-height {
-  height: 738px;
+.custom__hero__section {
+  background-image: url(https://i.ibb.co/P5Rhjyd/Bitcoin.png);
+  background-repeat: no-repeat;
+  background-position: 100% 35%;
+  background-size: 15%;
 }
 
 .custom__header, .custom__nav__wrapper {
   background-color: #F4F5FA !important;
-  margin-bottom: 76px;
   
-}
-
-.custom__hero__section-img {
-  position: absolute;
-  right: 0;
 }
 
 .custom__hero__section-h6 {
@@ -110,11 +107,6 @@ p {
 
 /* wallet */
 
-.custom__wallet__card {
-  border-radius: 15px;
-
-}
-
 .custom__wallet__primary {
   background-color: #1F33D8;
 }
@@ -133,12 +125,11 @@ p {
 
 .custom__wallet__card {
   border: none;
-  max-width: 373px;
   margin: auto;
   width: 100%;
   overflow: hidden;
   height: 462px;
-  
+  border-radius: 15px;
 }
 
 .custom__z__index {
@@ -251,3 +242,74 @@ p {
 .custom__footer__link {
   color: #5B5D6D;
 }
+
+
+
+
+/* media quearies */
+
+@media screen and (max-width: 768px) {
+  .custom__hero__section {  
+    background-position: 100% 75%;
+    background-size: 30%;
+  }
+
+  .custom__media__container {
+    flex-direction: column;
+    align-items: center !important;
+  }
+}
+
+
+.is-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 24px 0 rgb(0 0 0 / 15%);
+  background-color: #F4F5FA !important;
+  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+  padding: 0px 20px;
+}
+
+/* sidebar styles */
+
+.side-navbar {
+  width: 180px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  margin-top: 75px;
+  bottom: 0;
+  margin-left: -300px;
+  /* background-color: blue; */
+  transition: 0.5s;
+}
+.nav-link:active,
+.nav-link:focus,
+.nav-link:hover {
+  background-color: #ffffff26;
+}
+.my-container {
+  transition: 0.4s;
+}
+.active-nav {
+  margin-left: 0;
+}
+/* for main section */
+.active-cont {
+  margin-left: 180px;
+}
+#menu-btn {
+  background-color: #100901;
+  color: #fff;
+  margin-left: -62px;
+}
+
+
+/* dashboard styles */
+.custom__dashboard__margin {
+  margin-left: 180px;
+}
+

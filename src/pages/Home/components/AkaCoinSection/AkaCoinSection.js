@@ -10,7 +10,7 @@ const AkaCoinSection = () => {
         <h1 className="text-center custom__global__title">What Is Akacoin?</h1>
         <div className="row custom__margin__bottom">
           <div className="col-12 col-md-5">
-            <h2 className="custom__akaCoin-h2">
+            <h2 className="custom__akaCoin-h2 mb-5 mb-md-0">
               The fastest growing and community friendly
             </h2>
           </div>
@@ -25,8 +25,12 @@ const AkaCoinSection = () => {
             </a>
           </div>
         </div>
-        <div className="d-flex align-items-stretch">
-          <img src={image_2} className="img-fluid me-4" alt="" />
+        <div className="d-flex align-items-stretch custom__media__container">
+          <img
+            src={image_2}
+            className="img-fluid me-md-4 d-inline-block mb-5 mb-md-0"
+            alt=""
+          />
           {/* react palyer- a third party library component */}
           <div className="custom__player__container">
             <ReactPlayer

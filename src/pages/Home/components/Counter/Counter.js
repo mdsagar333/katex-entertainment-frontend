@@ -30,7 +30,7 @@ const Counter = () => {
         <div className="row">
           {networkStatistics.map((item, index) => {
             return (
-              <div className={`col-12 col-md-3`} key={index}>
+              <div className={`col-12 col-md-3 mb-5 mb-md-2`} key={index}>
                 <p>{item.title}</p>
                 <h3>{`${item.dollerSign ? "$" : ""}${item.value}`}</h3>
               </div>
